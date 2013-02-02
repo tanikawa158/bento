@@ -1,0 +1,4 @@
+# Ignore setting and backup files on Linux
+.*
+!.gitignore
+*~
