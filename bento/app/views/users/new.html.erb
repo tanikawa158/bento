@@ -31,7 +31,7 @@
   </div>
   <div class="field">
     <%= f.label :role_id %><br />
-    <%= f.number_field :role_id %>
+    <%= f.collection_select(:role_id, Role.all, :id, :role_name) %>
   </div>
   <div class="actions">
     <%= f.submit %>
