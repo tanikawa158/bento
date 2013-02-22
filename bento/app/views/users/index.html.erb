@@ -14,7 +14,7 @@
   <tr>
     <td><%= user.user_name %></td>
     <td><%= user.campany_id %></td>
-    <td><%= user.role_id %></td>
+    <td><%= Role.find(user.role_id)[:role_name].to_s %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
