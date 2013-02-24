@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130222115954) do
+ActiveRecord::Schema.define(:version => 20130224231119) do
+
+  create_table "Users", :force => true do |t|
+    t.string   "user_name"
+    t.string   "password_digest"
+    t.integer  "company_id"
+    t.integer  "role_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "role_name"
@@ -20,15 +29,6 @@ ActiveRecord::Schema.define(:version => 20130222115954) do
     t.boolean  "edit_role"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "user_name"
-    t.string   "password_digest"
-    t.integer  "campany_id"
-    t.integer  "role_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
   end
 
 end
