@@ -7,7 +7,7 @@
 
 <p>
   <b>Company:</b>
-  <%= @user.company.company_name %>
+  <%= link_to @user.company.company_name, company_path(@user.company) if !@user.company.nil?%>
 </p>
 
 <p>
