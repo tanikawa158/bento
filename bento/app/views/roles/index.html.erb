@@ -6,6 +6,8 @@
     <th>Admin</th>
     <th>Edit user</th>
     <th>Edit role</th>
+    <th>Edit all company</th>
+    <th>Edit own company</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,6 +19,8 @@
     <td><%= role.admin %></td>
     <td><%= role.edit_user %></td>
     <td><%= role.edit_role %></td>
+    <td><%= role.edit_company %></td>
+    <td><%= role.edit_own_company %></td>
     <td><%= link_to 'Show', role %></td>
     <td><%= link_to 'Edit', edit_role_path(role) %></td>
     <td><%= link_to 'Destroy', role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
