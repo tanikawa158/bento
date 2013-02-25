@@ -1,4 +1,14 @@
 class UsersController < ApplicationController
+  def check
+     if Company.all.empty?
+       redirect_to :controller => 'companies', :action => "index", :notice=> 'Company is not exist' and return
+     end
+     if Role.all.empty?
+       redirect_to :controller => 'roles', :action => "index", :notice => 'Role is not exist.' and return
+     end
+  end
+  before_filter :check
+
   # GET /users
   # GET /users.json
   def index
