@@ -3,11 +3,11 @@
 one:
   user_name: MyString
   password_digest: MyString
-  campany_id: 1
+  company_id: 1
   role_id: 1
 
 two:
   user_name: MyString
   password_digest: MyString
-  campany_id: 1
+  company_id: 1
   role_id: 1
