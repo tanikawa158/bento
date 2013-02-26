@@ -14,7 +14,7 @@
   <tr>
     <td><%= user.user_name %></td>
     <td><%= user.company.company_name if !user.company.nil? %></td>
-    <td><%= Role.find(user.role_id)[:role_name].to_s %></td>
+    <td><%= user.role.role_name if !user.role.nil? %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>

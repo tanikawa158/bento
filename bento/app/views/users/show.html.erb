@@ -12,7 +12,7 @@
 
 <p>
   <b>Role:</b>
-  <%= link_to @user.role.role_name, role_path(@user.role) %>
+  <%= link_to @user.role.role_name, role_path(@user.role) if !@user.role.nil?%>
 </p>
 
 
