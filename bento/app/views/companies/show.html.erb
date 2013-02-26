@@ -5,6 +5,13 @@
   <%= @company.company_name %>
 </p>
 
+<p>
+  <b>Member:</b>
+  <% @company.users.all.each do |user| %>
+    <%= user.user_name %>
+  <% end %>
+</p>
+
 
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>

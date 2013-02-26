@@ -30,6 +30,12 @@
   <%= @role.edit_own_company %>
 </p>
 
+<p>
+  <b>Member:</b>
+  <% @role.users.all.each do |user| %>
+    <%= user.user_name %>
+  <% end %>
+</p>
 
 <%= link_to 'Edit', edit_role_path(@role) %> |
 <%= link_to 'Back', roles_path %>
