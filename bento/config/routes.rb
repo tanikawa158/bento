@@ -1,4 +1,7 @@
 Bento::Application.routes.draw do
+  resources :items
+
+
   resources :companies
 
 
