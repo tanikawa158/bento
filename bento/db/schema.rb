@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130307094809) do
+ActiveRecord::Schema.define(:version => 20130307105431) do
 
   create_table "Users", :force => true do |t|
     t.string   "user_name"
@@ -65,6 +65,8 @@ ActiveRecord::Schema.define(:version => 20130307094809) do
     t.datetime "updated_at",       :null => false
     t.boolean  "edit_company"
     t.boolean  "edit_own_company"
+    t.boolean  "edit_own_item"
+    t.boolean  "edit_all_item"
   end
 
 end
