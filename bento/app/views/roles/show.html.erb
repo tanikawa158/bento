@@ -31,6 +31,16 @@
 </p>
 
 <p>
+  <b>Edit all item:</b>
+  <%= @role.edit_all_item %>
+</p>
+
+<p>
+  <b>Edit own item:</b>
+  <%= @role.edit_own_item %>
+</p>
+
+<p>
   <b>Member:</b>
   <% @role.users.all.each do |user| %>
     <%= user.user_name %>

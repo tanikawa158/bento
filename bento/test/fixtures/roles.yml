@@ -5,9 +5,17 @@ one:
   admin: false
   edit_user: false
   edit_role: false
+  edit_company: false
+  edit_own_company: false
+  edit_own_item: false
+  edit_all_item: false
 
 two:
   role_name: MyString
   admin: false
   edit_user: false
   edit_role: false
+  edit_company: false
+  edit_own_company: false
+  edit_own_item: false
+  edit_all_item: false
