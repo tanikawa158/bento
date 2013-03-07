@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130225094852) do
+ActiveRecord::Schema.define(:version => 20130307094809) do
 
   create_table "Users", :force => true do |t|
     t.string   "user_name"
@@ -27,6 +27,34 @@ ActiveRecord::Schema.define(:version => 20130225094852) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
+
+  create_table "items", :force => true do |t|
+    t.string   "item_name"
+    t.integer  "item_price"
+    t.integer  "category_id"
+    t.integer  "item_option_id"
+    t.integer  "company_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "items", ["category_id"], :name => "index_items_on_category_id"
+  add_index "items", ["company_id"], :name => "index_items_on_company_id"
+  add_index "items", ["item_option_id"], :name => "index_items_on_item_option_id"
+
+  create_table "orders", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "item_id"
+    t.string   "user_name"
+    t.string   "item_name"
+    t.integer  "item_price"
+    t.integer  "order_status"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "orders", ["item_id"], :name => "index_orders_on_item_id"
+  add_index "orders", ["user_id"], :name => "index_orders_on_user_id"
 
   create_table "roles", :force => true do |t|
     t.string   "role_name"
