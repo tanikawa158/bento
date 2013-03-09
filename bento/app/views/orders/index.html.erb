@@ -15,8 +15,8 @@
 
 <% @orders.each do |order| %>
   <tr>
-    <td><%= order.user %></td>
-    <td><%= order.item %></td>
+    <td><%= order.user.user_name %></td>
+    <td><%= order.item.item_name %></td>
     <td><%= order.user_name %></td>
     <td><%= order.item_name %></td>
     <td><%= order.item_price %></td>
