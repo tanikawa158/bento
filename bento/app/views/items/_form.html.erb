@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+  <% if false %>
   <div class="field">
     <%= f.label :category %><br />
     <%= f.text_field :category %>
@@ -19,6 +20,8 @@
     <%= f.label :goods_option %><br />
     <%= f.text_field :goods_option %>
   </div>
+  <% end %>
+
   <div class="field">
     <%= f.label :company %><br />
     <%= f.collection_select :company_id, Company.all, :id, :company_name %>
