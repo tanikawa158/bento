@@ -1,21 +1,25 @@
 <h1>Listing sessions</h1>
 
+<% if @user %>
 <table>
   <tr>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>User name</th>
+    <th>Company</th>
   </tr>
 
-<% @sessions.each do |session| %>
   <tr>
-    <td><%= link_to 'Show', session %></td>
-    <td><%= link_to 'Edit', edit_session_path(session) %></td>
-    <td><%= link_to 'Destroy', session, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= @user.user_name %></td>
+    <td><%= @user.company.company_name %></td>
   </tr>
-<% end %>
 </table>
+<% end %>
 
 <br />
 
-<%= link_to 'New Session', new_session_path %>
+<%= link_to 'New Session', login_path %>
+<% if @user %>
+|
+<%= link_to 'Destroy Session', logout_path %>
+
+<% end %>
+

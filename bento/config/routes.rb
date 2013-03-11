@@ -1,4 +1,9 @@
 Bento::Application.routes.draw do
+  match 'login' => 'sessions#new'
+  match 'logout' => 'sessions#destroy'
+  post 'sessions' => 'sessions#create'
+  get 'sessions' => 'sessions#index'
+
   resources :orders
 
 
