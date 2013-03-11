@@ -1,3 +1,14 @@
+<% if flash[:alert] %>
+  <div id="error_explanation">
+    <h2>
+      You have some Errors
+    </h2>
+    <ul>
+      <li><%= flash[:alert] %></li>
+    </ul>
+  </div>
+<% end %>
+
 <h1>New session</h1>
 
 <%= render 'form' %>
